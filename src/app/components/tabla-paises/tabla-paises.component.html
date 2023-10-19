@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre del País</th>
+          <th>Bandera</th>
+          <th>Seleccionar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pais of paises">
+          <td>{{ pais.nombre }}</td>
+          <td><img [src]="pais.bandera" alt="Bandera de {{ pais.nombre }}" width="50"></td>
+          <td class="d-flex justify-content-center aling-items-center">
+            <button (click)="seleccionar(pais)" class="btn btn-primary">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

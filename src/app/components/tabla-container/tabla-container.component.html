@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Lista de Contenedores</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Color</th>
+          <th>Empresa</th>
+          <th>Capacidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let container of containers">
+          <td>{{ container.codigo }}</td>
+          <td>{{ container.color }}</td>
+          <td>{{ container.empresa }}</td>
+          <td>{{ container.capacidad }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="seleccionarContainer(container)">Seleccionar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

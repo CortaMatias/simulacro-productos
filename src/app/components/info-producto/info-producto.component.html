@@ -1,0 +1,18 @@
+<div class="container"><div class="card" *ngIf="producto">
+    <div class="card-body">
+      <!-- Código del producto -->
+      <p class="card-text">Código: {{ producto.codigo }}</p>
+      <!-- Descripción del producto -->
+      <p class="card-text">Descripción: {{ producto.descripcion }}</p>
+      <!-- Precio del producto -->
+      <p class="card-text">Precio: {{ producto.precio }}</p>
+      <!-- Stock del producto -->
+      <p class="card-text">Stock: {{ producto.stock }}</p>
+      <!-- País de Origen del producto -->
+      <p class="card-text">País de Origen: {{ producto.paisOrigen.nombre }}</p>
+      <!-- Comestible -->
+      <p class="card-text">Comestible: {{ producto.comestible ? 'Sí' : 'No' }}</p>
+    </div>
+  </div></div>
+
+  

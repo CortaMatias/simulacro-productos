@@ -1,0 +1,10 @@
+<div class="container m-5">
+    <div class="row p-3 m-5">
+        <app-tabla-producto (productoSeleccionado)="getProductoSeleccionado($event)"></app-tabla-producto>
+    </div>
+
+    <div class="row p-3 m-2">
+        <div class="col"> <app-info-producto [producto]="productoSeleccionado" *ngIf="productoSeleccionado"></app-info-producto></div>
+        <div class="col"> <app-detalle-paises [pais]="paisSeleccionado" *ngIf="paisSeleccionado"></app-detalle-paises> </div>      
+    </div>
+</div>

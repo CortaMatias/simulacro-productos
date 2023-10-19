@@ -1,0 +1,10 @@
+
+
+<div class="container" *ngIf="containerSeleccionado">
+    <div class="row">
+      <h1>Contenedor a Borrar</h1>
+      <p>Código: {{ containerSeleccionado.codigo }}</p>
+      <button class="btn-primary" (click)="confirmarBorrarContainer()">BORRAR</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <app-tabla-container [containers]="containers" (containerSelected)="onSelectContainer($event)"></app-tabla-container>
+  </div>
+
+  <div class="row">
+    <div class="col"><app-alta-container (containerCreated)="onContainerCreated($event)"></app-alta-container></div>
+    <div class="col"><app-borrar-container [containerSeleccionado]="selectedContainer" (containerBorrado)="onContainerDeleted($event)"></app-borrar-container></div>
+    <div class="col"><app-modificar-container [containerSeleccionado]="selectedContainer" (containerModificado)="onContainerUpdated($event)"></app-modificar-container></div>
+
+  </div>
+</div>

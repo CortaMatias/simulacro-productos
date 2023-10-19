@@ -1,0 +1,29 @@
+<div class="container m-5">
+  <h2>Lista de Productos</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código</th>
+
+        <th>Stock</th>
+
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.codigo }}</td>
+
+        <td>{{ producto.stock }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="seleccionarProducto(producto)"
+          >
+            Seleccionar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

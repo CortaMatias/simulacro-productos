@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <h2>Alta de Contenedor</h2>
+      <form [formGroup]="containerForm" (ngSubmit)="guardarContenedor()">
+        <div class="form-group">
+          <label for="codigo">Código:</label>
+          <input type="text" class="form-control" id="codigo" formControlName="codigo" required />
+          <div *ngIf="containerForm.get('codigo')!.hasError('required') && containerForm.get('codigo')!.touched" style="color: red;">
+            Código es requerido
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="color">Color:</label>
+          <input type="text" class="form-control" id="color" formControlName="color" required />
+          <div *ngIf="containerForm.get('color')!.hasError('required') && containerForm.get('color')!.touched" style="color: red;">
+            Color es requerido
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="empresa">Empresa:</label>
+          <input type="text" class="form-control" id="empresa" formControlName="empresa" required />
+          <div *ngIf="containerForm.get('empresa')!.hasError('required') && containerForm.get('empresa')!.touched" style="color: red;">
+            Empresa es requerida
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="capacidad">Capacidad:</label>
+          <input type="number" class="form-control" id="capacidad" formControlName="capacidad" required />
+          <div *ngIf="containerForm.get('capacidad')!.hasError('required') && containerForm.get('capacidad')!.touched" style="color: red;">
+            Capacidad es requerida
+          </div>
+        </div>
+  
+        <button type="submit" class="btn btn-primary mt-5">Guardar</button>
+      </form>
+    </div>
+  </div>
+  

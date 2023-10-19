@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simulacro-webb": {
+      "hosting": {
+        "productos": [
+          "simulacro-webb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simulacro-webb"
+  }
+}

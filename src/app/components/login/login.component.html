@@ -1,0 +1,21 @@
+<div class="container m-5 p-5">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+      <form  [formGroup]="formReg" (ngSubmit)="onSubmit()">
+        <h3>Log In</h3>
+      
+        <label for="username">Email</label>
+        <input type="text" placeholder="Email" id="usernameRegister" class="form-control" formControlName="email">
+      
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="passwordRegister" class="form-control" formControlName="password">
+      
+        <button type="submit">Log In</button>
+        <div class="social">
+            <button type="button" class="go" (click)="logAdmin()">Admin</button>
+            <button type="button" class="go" (click)="logEmpleado()">Empleado</button>
+        </div>
+      </form>      
+</div>
